@@ -1,0 +1,28 @@
+{
+  "name": "pokecardex-whatnot-extension",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Extension locale Pokecardex vers CSV Whatnot.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "lint:firefox": "web-ext lint --source-dir dist/firefox",
+    "package:chrome": "web-ext build --source-dir dist/chrome-edge --artifacts-dir release --filename extension-chrome-edge.zip --overwrite-dest",
+    "package:firefox": "web-ext build --source-dir dist/firefox --artifacts-dir release --filename extension-firefox-unsigned.xpi --overwrite-dest",
+    "package": "npm run build && npm run test && npm run lint:firefox && npm run package:chrome && npm run package:firefox",
+    "sign:firefox": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/sign-firefox.ps1",
+    "smoke:browsers": "node scripts/smoke-browsers.mjs",
+    "smoke:firefox": "node scripts/smoke-firefox.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.2.2",
+    "@types/node": "^26.1.1",
+    "esbuild": "^0.28.1",
+    "jsdom": "^29.1.1",
+    "playwright-core": "^1.61.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10",
+    "web-ext": "^10.5.0"
+  }
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokecardex vers Whatnot</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="popup-header">
+        <img src="assets/icon-128.png" alt="" width="58" height="58" />
+        <div>
+          <p class="eyebrow">Extension CSV</p>
+          <h1>Pokecardex <span aria-hidden="true">→</span> Whatnot</h1>
+        </div>
+      </header>
+
+      <section class="count-card" aria-live="polite">
+        <span id="card-count" class="count-value">0</span>
+        <div>
+          <strong id="card-status">Votre liste est vide</strong>
+          <p>Les cartes restent enregistrées dans ce navigateur.</p>
+        </div>
+      </section>
+
+      <section class="settings-card" aria-labelledby="settings-heading">
+        <div class="section-heading">
+          <h2 id="settings-heading">Réglages actuels</h2>
+          <span>CSV</span>
+        </div>
+        <dl>
+          <div><dt>Catégorie</dt><dd id="setting-category">—</dd></div>
+          <div><dt>Sous-catégorie</dt><dd id="setting-subcategory">—</dd></div>
+          <div><dt>Description</dt><dd id="setting-description">—</dd></div>
+          <div><dt>Quantité</dt><dd id="setting-quantity">—</dd></div>
+          <div><dt>Type</dt><dd id="setting-type">—</dd></div>
+          <div><dt>Prix</dt><dd id="setting-price">—</dd></div>
+          <div><dt>Livraison</dt><dd id="setting-shipping">—</dd></div>
+        </dl>
+      </section>
+
+      <div class="popup-actions">
+        <button id="open-list" class="button button-primary" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h8l4 4v14H7z"></path><path d="M15 3v5h5"></path><path d="M10 12h6M10 16h6"></path>
+          </svg>
+          Ouvrir ma liste
+        </button>
+        <button id="open-pokecardex" class="button button-secondary" type="button">
+          Ouvrir Pokecardex
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 16 16 8"></path><path d="M9 8h7v7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <p class="footer-note">Le titre est récupéré automatiquement pour chaque carte.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

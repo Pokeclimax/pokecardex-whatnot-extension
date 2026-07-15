@@ -31,6 +31,12 @@ Le fichier est signé pour Firefox et correspond à la version 1.1.0.
 
 Le titre est récupéré automatiquement pour chaque carte. Il peut être corrigé avec le bouton **Modifier** présent sur chaque ligne.
 
+## Une liste prête pour Whatnot
+
+![Liste de cartes et réglages essentiels](docs/screenshots/liste-whatnot.png)
+
+Le CSV généré **remplace le CSV Bulk de Whatnot** : il est prêt à être importé à la place du modèle Bulk rempli manuellement. La liste permet de relire les cartes, modifier un titre et appliquer les réglages essentiels avant l’export.
+
 ## Réglages Whatnot par défaut
 
 | Champ | Valeur initiale |
